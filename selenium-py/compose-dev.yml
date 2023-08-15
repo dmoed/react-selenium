@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  selenium_web:
+    image: react-selenium-py:latest
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - ./images:/app/images
+    networks:
+      - selenium-network
+networks:
+  selenium-network:
+    external: true
+    name: react_selenium_network

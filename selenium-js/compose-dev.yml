@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  app-selenium:
+    image: react-selenium-test:latest
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - ./images:/app/images
