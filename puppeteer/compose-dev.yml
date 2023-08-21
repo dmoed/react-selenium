@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  app-selenium:
+    image: puppeteer:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "3010:3010"
+networks:
+  selenium-network:
+    external: true
+    name: react_selenium_network

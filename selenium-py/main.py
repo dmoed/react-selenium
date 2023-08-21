@@ -22,6 +22,7 @@ def main():
     print("open", url)
     #take & save screenshot
     driver.save_screenshot('images/out.png')
+
     driver.quit()
 
 if __name__ == '__main__':
